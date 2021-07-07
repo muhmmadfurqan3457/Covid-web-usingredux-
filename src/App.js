@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import WorldtotalCases from './config/worldTotalcases';
+import Home from './home';
+import Store from './Store';
+import {Provider} from 'react-redux'
+// import { useEffect, useState } from 'react';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <div>
+     <Provider store={Store}> 
+
+
+      <Home />
+    
+      {/* <WorldtotalCases/> */}
+ 
+      </Provider>
+       </div>
   );
 }
 
 export default App;
+ 
